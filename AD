@@ -55,7 +55,7 @@ local File = Macro:CreateSection("File",false)
 
 -- dropdown
 
-local ChooseMacro = Macro:CreateDropdown({
+local ChooseMacro = File:CreateDropdown({
     Name = "Dropdown Example",
     Options = {"Option 1","Option 2"},
     CurrentOption = "Option 1" or {"Option 1","Option 3"},
