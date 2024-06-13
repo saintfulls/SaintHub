@@ -1,6 +1,5 @@
-local Player = game:GetService("Player")
-local LocalPlayer = Player.LocalPlayer
-
+local players = game:GetService("Players")
+local LocalPlayer = players.LocalPlayer
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
