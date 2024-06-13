@@ -14,13 +14,13 @@ local PS = game:GetService('PhysicsService')
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Rayfield Example Window",
-    LoadingTitle = "Rayfield Interface Suite",
-    LoadingSubtitle = "by Sirius",
+    Name = "SaintHub",
+    LoadingTitle = "AD Script",
+    LoadingSubtitle = "by .saintfulls",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = "SaintHub", -- Create a custom folder for your hub/game
-       FileName = "\\settings\\"..LocalPlayer.UserId
+       FileName = "\\settings_"..LocalPlayer.UserId
     },
     Discord = {
        Enabled = false,
