@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
     ConfigurationSaving = {
        Enabled = true,
        FolderName = "SaintHub", -- Create a custom folder for your hub/game
-       FileName = "/settings/"..LocalPlayer.UserId
+       FileName = "\\settings\\"..LocalPlayer.UserId
     },
     Discord = {
        Enabled = false,
@@ -43,7 +43,7 @@ local Window = Rayfield:CreateWindow({
  -- tab
 
  local Main = Window:CreateTab("Main", 4483362458) -- Title, Image
- local Autofarm = Window:CreateTab("Autofarm", 4483362458) -- Title, Image
+ local Autofarm = Window:CreateTab("Autofarm+", 4483362458) -- Title, Image
  local Macro = Window:CreateTab("Macro", 4483362458) -- Title, Image
  local Banner = Window:CreateTab("Banner", 4483362458) -- Title, Image
  local Misc = Window:CreateTab("Misc", 4483362458) -- Title, Image
@@ -54,10 +54,7 @@ local File = Macro:CreateSection("File",false)
 
 
 -- dropdown
-local Banner = {
-    ["Banner Z"] = 1
-    
-}
+
 local ChooseMacro = Macro:CreateDropdown({
     Name = "Dropdown Example",
     Options = {"Option 1","Option 2"},
