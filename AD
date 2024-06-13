@@ -1,0 +1,62 @@
+local Player = game:GetService("Player")
+local LocalPlayer = Player.LocalPlayer
+
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Rayfield Example Window",
+    LoadingTitle = "Rayfield Interface Suite",
+    LoadingSubtitle = "by Sirius",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = "SaintHub", -- Create a custom folder for your hub/game
+       FileName = "//settings//"..LocalPlayer.userid
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Sirius Hub",
+       Subtitle = "Key System",
+       Note = "Join the discord (discord.gg/sirius)",
+       FileName = "SiriusKey",
+       SaveKey = true,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "Hello"
+    }
+ })
+
+
+ -- tab
+
+ local Main = Window:CreateTab("Main", 4483362458) -- Title, Image
+ local Autofarm = Window:CreateTab("Autofarm", 4483362458) -- Title, Image
+ local Macro = Window:CreateTab("Macro", 4483362458) -- Title, Image
+ local Banner = Window:CreateTab("Banner", 4483362458) -- Title, Image
+ local Misc = Window:CreateTab("Misc", 4483362458) -- Title, Image
+
+-- section
+
+local File = Macro:CreateSection("File",false) 
+
+
+-- dropdown
+local Banner = {
+    ["Banner Z"] = 1
+    
+}
+local ChooseMacro = Macro:CreateDropdown({
+    Name = "Dropdown Example",
+    Options = {"Option 1","Option 2"},
+    CurrentOption = "Option 1" or {"Option 1","Option 3"},
+    MultiSelection = false, -- If MultiSelections is allowed
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+    -- The function that takes place when the selected option is changed
+    -- The variable (Option) is a string for the value that the dropdown was changed to
+    end,
+ })
