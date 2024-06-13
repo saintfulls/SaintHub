@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
     ConfigurationSaving = {
        Enabled = true,
        FolderName = "SaintHub", -- Create a custom folder for your hub/game
-       FileName = "//settings//"..LocalPlayer.userid
+       FileName = "/settings/"..LocalPlayer.UserId
     },
     Discord = {
        Enabled = false,
