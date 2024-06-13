@@ -55,7 +55,7 @@ local File = Macro:CreateSection("File",false)
 
 -- dropdown
 
-local ChooseMacro = File:CreateDropdown({
+local ChooseMacro = Macro:CreateDropdown({
     Name = "Dropdown Example",
     Options = {"Option 1","Option 2"},
     CurrentOption = "Option 1" or {"Option 1","Option 3"},
@@ -66,3 +66,16 @@ local ChooseMacro = File:CreateDropdown({
     -- The variable (Option) is a string for the value that the dropdown was changed to
     end,
  })
+
+
+
+ -- toggle
+
+ local AutoLeave = Main:CreateToggle({
+   Name = "AutoLeave",
+   CurrentValue = false,
+   Flag = "AutoLeave", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+  
+   end,
+})
