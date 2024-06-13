@@ -1,6 +1,16 @@
 local players = game:GetService("Players")
 local LocalPlayer = players.LocalPlayer
 
+
+-- SERVICES
+local HttpService = game:GetService('HttpService')
+local UIS = game:GetService('UserInputService')
+local RunS = game:GetService('RunService')
+local RS = game:GetService('ReplicatedStorage')
+local TS = game:GetService('TweenService')
+local PS = game:GetService('PhysicsService')
+
+
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
